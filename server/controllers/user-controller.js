@@ -13,7 +13,7 @@ class UserController {
 
       return res.json(userData)
     } catch (e) {
-      console.log(e);
+      next(e)
     }
   }
 
@@ -21,7 +21,7 @@ class UserController {
     try {
       
     } catch (e) {
-      
+      next(e)
     }
   }
 
@@ -29,15 +29,7 @@ class UserController {
     try {
       
     } catch (e) {
-      
-    }
-  }
-
-  async activate(req, res, next) {
-    try {
-      
-    } catch (e) {
-      
+      next(e)
     }
   }
 
@@ -45,7 +37,7 @@ class UserController {
     try {
       
     } catch (e) {
-      
+      next(e)
     }
   }
 
@@ -53,7 +45,7 @@ class UserController {
     try {
       res.json(['123', '1234'])
     } catch (e) {
-      
+      next(e)
     }
   }
 }
